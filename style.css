@@ -1,0 +1,309 @@
+/* nav {
+    display: flex;
+    background-color: black;
+    padding: 15px;
+    justify-content: space-evenly;
+    font-size: 20px;
+    color: white; */
+    /* } */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Google Sans Regular";
+    box-sizing: border-box;
+}
+
+body {
+    background: #fefefe;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: #11101b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 100px ;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefefe;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin:0 6px;
+    cursor: pointer;
+}
+/* Nav-bar hover */
+.nav-bar ul li a:hover {
+    color: black;
+    opacity: 1;
+    text-decoration: none;
+    background: white;
+    }
+
+.nav-bar ul li a.home_ {
+color: #11101b;
+background: #fefefe;
+}
+
+/* Responsive at 1320px */
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+/* Responsive at 900px with menu bar (for mobile devices)*/
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #11101b;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    #whole-website .home {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-rows: 600px 550px 420px 650px 450px;
+        grid-template-columns: auto;
+        justify-items: center;
+        .self-img img {
+            height: 600px;
+            width: 500px;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            display: flex;
+            align-items: center;
+            text-align: center; 
+            margin: 0 auto;
+        }
+        .intro {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            font-size: 20px;
+            padding: 40px;
+        }
+       .my-skills {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            font-size: 30px;
+            padding: 40px;
+        }
+        .my-passion {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            font-size: 20px;
+            padding: 40px;
+        }
+        .my-goal {
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            font-size: 20px;
+            padding: 40px;
+            /* position: relative;
+            right: -10px; */
+        }
+    }
+
+.nav-bar.home_ {
+    height: 450px;
+}
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: auto auto auto auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.home_ ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+        color: white;
+    }
+}
+
+div {
+    font-family: arial;
+    background-color: transparent;
+    }
+.home {
+    display: grid;
+    grid-gap: 15px; 
+    grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+
+    .self-img img {
+        height: 600px;
+        width: 500px;
+        grid-row-start: 1;
+        grid-row-end: 16;
+        grid-column-start: 1;
+        grid-column-end: 8;
+    }
+       
+    .intro {
+        position: relative;
+        right: 15px;
+        bottom: -10px;
+        /* padding-top: 10px; */
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: #ed0099;
+        font-size: 17px;
+        border-radius: 10px;
+        grid-row: 1 / 7;
+        grid-column: 7 / 14;
+        line-height: 2; 
+        margin: 0;
+       font-size: 19px;
+       }
+    
+    .my-skills {   
+        position: relative;
+        bottom: -10px;
+        right: 15px; 
+        font-size: 20px;
+        padding: 15px;
+        background-color: #ff0000;
+        border-radius: 10px;
+        grid-row: 1 / 7;
+        grid-column: 14 / 18;
+        line-height: 35px; 
+        list-style-type: square;
+        }
+     
+    .my-passion {
+        position: relative;
+        right: 25px;
+        padding: 15px;
+        background-color: #0cff2d;
+        font-size: 15px;
+        border-radius: 10px;      
+        grid-row: 7 / 14;
+        grid-column: 7 / 13;
+        line-height: 2; 
+        }
+    
+    .my-goal {
+        padding: 15px;
+        position: relative;
+        right: 25px;
+        background-color: #ff00f7;
+        border-radius: 10px;
+        font-size: 17px;
+        grid-row: 7 / 13;
+        grid-column: 13/ 18;
+        line-height: 2;
+        }
+
+
+    }
+    
+.about-me {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+.about {
+    background-color: orange;
+    padding: 15px;
+    border: darkorange solid 7px;
+    border-radius: 10px;
+}
+.JPMC {
+    background-color: rgb(0, 85, 255);
+    padding: 15px;
+    border: darkblue solid 7px;
+    border-radius: 10px;
+#JPMC-button {
+    background-color: #0cff2d;
+    display: flex;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+}
+.p2 {
+    background-color: rgb(163, 235, 28);
+    padding: 15px;
+    border: gold solid 7px;
+    border-radius: 10px;
+}
+.p3 {
+    background-color: rgb(98, 230, 22);
+    padding: 15px;
+    border: rgb(7, 121, 7) solid 7px;
+    border-radius: 10px;
+}
+.p4 {
+    background-color: rgb(238, 90, 171);
+    padding: 15px;
+    border: magenta solid 7px;
+    border-radius: 10px;
+}
+.p5 {
+    background-color: rgb(235, 56, 94);
+    padding: 15px;
+    border: rgb(255, 12, 12) solid 7px;
+    border-radius: 10px;
+}
+
+} 
+
+    
